@@ -1381,6 +1381,27 @@ body { hyphens: manual; overflow-wrap: normal; word-break: normal; }
 .back-link:hover { background: var(--ink); color: var(--on-ink); }
 .back-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .btn[href^="services/"]::after { content: "→"; }
+/* Cân dòng giữa các ô tương ứng (31.10 tối) */
+.mx-h { grid-template-rows: auto auto 1fr auto; }
+.mx-h b { min-height: 2.6em; }
+.mx-h .mx-more { align-self: end; justify-self: start; }
+.mx-sub { text-wrap: balance !important; }
+@media (min-width: 900px) {
+  .ways { grid-template-rows: repeat(7, auto); row-gap: 0; }
+  .ways > .way { grid-row: span 7; grid-template-rows: subgrid; row-gap: 6px; }
+}
+@media (max-width: 899px) { .mx-h b { min-height: 0; } }
+@media (min-width: 900px) {
+  .cards4 > .gcard { grid-row: span 5; grid-template-rows: subgrid; row-gap: 8px; }
+}
+.mx-sub { text-wrap: wrap !important; } .mx-sub strong { font-weight: 800; color: var(--ink); } .mx-h[aria-expanded="true"] .mx-sub strong { color: var(--on-ink); }
+@media (min-width: 900px) {
+  .svc-matrix { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .mx-panel::before { left: calc((var(--n) - 1) * ((100% - 36px) / 4 + 12px) + (100% - 36px) / 8 - 8px); }
+}
+.gcard p strong { font-weight: 800; color: var(--ink); }
+.mx-ask { font-size: 13.5px; line-height: 1.45; font-style: italic; color: var(--ink); } .mx-h[aria-expanded="true"] .mx-ask { color: var(--on-ink); }
+.mx-ask { text-wrap: balance !important; }
 </style>
 </head>
 <body>
@@ -1438,28 +1459,28 @@ body { hyphens: manual; overflow-wrap: normal; word-break: normal; }
         <div class="g-top"><svg class="sym" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="23" r="13"/><path class="f" d="M20 6l5.5 17L20 20l-5.5 3z"/><path d="M17.5 2.5v-0M17 4.5l0-4 6 4v-4" transform="translate(0 0)"/></svg><span class="g-n">01</span></div>
         <h3 class="g-name">Xác định đúng hướng đi</h3>
         <p class="g-q">Doanh nghiệp nên đầu tư marketing vào đâu trước?</p>
-        <p>pRchitecture cùng doanh nghiệp đánh giá bối cảnh, nhận diện lợi thế cạnh tranh và xác định nhóm khách hàng cần ưu tiên. Mỗi quyết định marketing sau đó đều có mục đích rõ ràng: nói với ai, nói điều gì và đầu tư nguồn lực vào đâu.</p>
+        <p>Làm rõ mục tiêu, rà soát marketing hiện tại và nghiên cứu khách hàng, thị trường, đối thủ để xác định những việc doanh nghiệp nên ưu tiên. Tùy nhu cầu, pRchitecture có thể thực hiện một hạng mục như <strong>chẩn đoán marketing</strong>, <strong>nghiên cứu khách hàng</strong>, <strong>định vị thương hiệu</strong>, hoặc <strong>xây dựng chiến lược và kế hoạch marketing tổng thể</strong>, kèm hướng dẫn triển khai hoặc trực tiếp triển khai.</p>
         <div class="g-foot"><span class="g-price">từ 6 triệu đồng</span><a class="g-link" href="services/#huong-01">Xem chi tiết</a></div>
       </article>
       <article class="gcard">
         <div class="g-top"><svg class="sym" viewBox="0 0 40 40" aria-hidden="true"><circle class="f" cx="6" cy="20" r="2.6"/><path d="M6 20L34 6M6 20L34 34M6 20h28M34 4v32"/><path class="dash" d="M20 13v14"/></svg><span class="g-n">02</span></div>
         <h3 class="g-name">Tiếp cận đúng khách hàng</h3>
         <p class="g-q">Làm sao để khách hàng mục tiêu biết đến và ghi nhận chuyên môn?</p>
-        <p>pRchitecture khai thác tri thức từ đội ngũ thiết kế và chính các công trình đã hoàn thành, sau đó phát triển thành nội dung chuyên sâu, hồ sơ báo chí, hồ sơ giải thưởng và ấn phẩm. Uy tín nghề nghiệp được bồi đắp đều đặn, hướng tới nhóm khách hàng và loại hình dự án mà doanh nghiệp muốn theo đuổi.</p>
+        <p>Xây dựng nội dung và triển khai truyền thông để doanh nghiệp, công trình và người sáng lập được những đối tượng phù hợp biết đến, hiểu và quan tâm. Công việc có thể gồm <strong>lập kế hoạch</strong>, <strong>sản xuất nội dung</strong> và <strong>quản trị mạng xã hội</strong>, <strong>biên soạn bài SEO</strong>, <strong>phát triển truyền thông cho người sáng lập</strong>, <strong>chuẩn bị hồ sơ báo chí, giải thưởng</strong> hoặc <strong>triển khai một chương trình truyền thông</strong> theo mục tiêu cụ thể.</p>
         <div class="g-foot"><span class="g-price">từ 5 triệu đồng</span><a class="g-link" href="services/#huong-02">Xem chi tiết</a></div>
       </article>
       <article class="gcard">
         <div class="g-top"><svg class="sym" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="6" width="32" height="28"/><path d="M20 26h16M20 26v8M28 26v8M8 10h10M8 14h6"/></svg><span class="g-n">03</span></div>
         <h3 class="g-name">Thuyết phục bằng năng lực</h3>
         <p class="g-q">Chủ đầu tư cần điều gì để tin chọn doanh nghiệp?</p>
-        <p>pRchitecture diễn giải kinh nghiệm thực hiện, phương pháp làm việc và công trình tiêu biểu thành hồ sơ năng lực, nội dung website và tài liệu giới thiệu. Chủ đầu tư có đủ thông tin để hiểu, đánh giá và tin tưởng từ trước buổi gặp đầu tiên.</p>
+        <p>Xây dựng và hoàn thiện những tài liệu giúp khách hàng, đối tác đánh giá chuyên môn và mức độ phù hợp của doanh nghiệp. pRchitecture có thể biên soạn <strong>hồ sơ năng lực</strong>, <strong>nội dung website</strong>, <strong>hồ sơ công trình</strong>, <strong>tài liệu giới thiệu dịch vụ</strong>, <strong>tài liệu hỗ trợ bán hàng</strong>, <strong>sách và các ấn phẩm chuyên môn</strong>. Nội dung, định dạng và phạm vi sản xuất được xác định theo mục đích sử dụng.</p>
         <div class="g-foot"><span class="g-price">từ 15 triệu đồng</span><a class="g-link" href="services/#huong-03">Xem chi tiết</a></div>
       </article>
       <article class="gcard">
         <div class="g-top"><svg class="sym" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 14h30M8 30h30M16 8v30M30 8v30"/><circle cx="16" cy="5" r="3"/><circle cx="30" cy="5" r="3"/><circle cx="5" cy="14" r="3"/><circle cx="5" cy="30" r="3"/></svg><span class="g-n">04</span></div>
         <h3 class="g-name">Vận hành marketing bài bản</h3>
         <p class="g-q">Làm sao để marketing vận hành đều mà không dồn lên vai người sáng lập?</p>
-        <p>pRchitecture thiết lập quy trình, đào tạo nhân sự và cố vấn theo kỳ, để đội ngũ chuyên môn và người làm truyền thông nói cùng một ngôn ngữ. Kế hoạch trở thành việc làm thực tế, nhất quán và bớt phụ thuộc vào người sáng lập.</p>
+        <p>Giúp doanh nghiệp tổ chức công việc marketing, phối hợp đội ngũ và duy trì chất lượng triển khai. Công việc có thể gồm <strong>thiết lập quy trình</strong>, <strong>quản lý tư liệu</strong>, <strong>phân công trách nhiệm</strong>, <strong>đào tạo nhân sự</strong>, <strong>cố vấn kế hoạch</strong>, <strong>rà soát đầu ra</strong> và <strong>điều phối</strong> những phần việc đã thống nhất. Hình thức hỗ trợ được lựa chọn theo đội ngũ và nguồn lực hiện có.</p>
         <div class="g-foot"><span class="g-price">từ 8 triệu đồng</span><a class="g-link" href="services/#huong-04">Xem chi tiết</a></div>
       </article>
     </div>

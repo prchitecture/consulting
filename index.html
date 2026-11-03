@@ -1402,6 +1402,12 @@ body { hyphens: manual; overflow-wrap: normal; word-break: normal; }
 .gcard p strong { font-weight: 800; color: var(--ink); }
 .mx-ask { font-size: 13.5px; line-height: 1.45; font-style: italic; color: var(--ink); } .mx-h[aria-expanded="true"] .mx-ask { color: var(--on-ink); }
 .mx-ask { text-wrap: balance !important; }
+.mx-h { grid-template-rows: auto auto auto 1fr auto; }
+.mx-works { display: flex; flex-wrap: wrap; gap: 4px 0; align-content: start; padding-top: 8px; margin-top: 4px; border-top: 1px dashed var(--line); font-size: 12.5px; line-height: 1.45; color: var(--ink-2); }
+.mx-works span:not(:last-child)::after { content: "·"; padding: 0 6px; color: var(--ink); }
+.mx-h[aria-expanded="true"] .mx-works { color: var(--on-ink); border-top-color: currentColor; }
+.mx-h[aria-expanded="true"] .mx-works span::after { color: var(--on-ink); }
+@media (min-width: 900px) { .mx-ask { min-height: 4.35em; } }
 </style>
 </head>
 <body>
@@ -1500,11 +1506,6 @@ body { hyphens: manual; overflow-wrap: normal; word-break: normal; }
       </div>
       <div class="cap-text">
         <p class="cap-lead">pRchitecture làm việc tại giao điểm của ba năng lực: tư duy chiến lược để xác định đúng mục tiêu kinh doanh, hiểu biết kiến trúc để đọc đúng giá trị của bản vẽ và công trình, phương pháp nghiên cứu và báo chí để diễn giải giá trị đó thành câu chuyện thu hút, có khả năng tạo ra chuyển đổi.</p>
-        <div class="founder">
-          <span class="label">Người sáng lập</span>
-          <b><a class="founder-link" href="https://mphuongb.notion.site/PORTFOLIO-BUI-MAI-PHUONG-14c22ce9adb58084b537f16ce39cea5b" target="_blank" rel="noopener">Bùi Mai Phương</a> · Đồng sáng lập pRchitecture</b>
-          <p>Chuyên gia với 7 năm kinh nghiệm thực hành marketing và truyền thông, gắn bó với lĩnh vực kiến trúc từ 2023: Trưởng nhóm nội dung tại một đơn vị khởi nghiệp thiết kế và thi công, sau đó là Trợ lý Truyền thông và Đối ngoại của Kiến trúc sư Hoàng Thúc Hào tại Văn phòng Kiến trúc <span class="nw">1+1&gt;2</span>. Hiện là cây viết của tạp chí Kiến trúc &amp; Đời sống và chuyên trang Kiến Việt. Mai Phương tiếp cận truyền thông như công cụ giải quyết bài toán kinh doanh của văn phòng thiết kế.</p>
-        </div>
       </div>
     </div>
   </section>
